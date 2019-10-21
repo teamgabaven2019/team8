@@ -1,28 +1,30 @@
-function get_todos() {
-    var todos = new Array;
-    var todos_str = localStorage.getItem('todo');
-    if (todos_str !== null) {
-        todos = JSON.parse(todos_str); 
+function get_todos() { //以前入れたリストの呼びだし？
+    var todos = new Array; //「todos」は複数のデータを含む配列
+    var todos_str = localStorage.getItem('todo'); //「todos_str」にローカルストレージから「todo」を入れる
+    if (todos_str !== null) { //もしtodos_strが空じゃなかったら
+        todos = JSON.parse(todos_str); //todos_strに入っているであろう文字列を解析したものをtodosに入れる？
     }
-    return todos;
+    return todos;　//返します
 }
  
-function add() {
-    var task = document.getElementById('task').value;
+function add() { //リストの追加
+    var task = document.getElementById('task').value; //「task」にid taskないのvalue属性の値を取得
+    //「getElementById」は、任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメソッド
  
     var todos = get_todos();
-    todos.push(task);
-    localStorage.setItem('todo', JSON.stringify(todos));
+    todos.push(task); //todosにtaskを入れる？
+    localStorage.setItem('todo', JSON.stringify(todos)); //ローカルに("名称","値")を追加
  
     show();
  
-    return false;
+    return false;　
 }
  
-function remove() {
-    var id = this.getAttribute('id');
-    var todos = get_todos();
-    todos.splice(id, 1);
+function remove() { //消す
+    var id = this.getAttribute('id'); //取得したい値を持ったidの値をidに？
+    var todos = get_todos();　
+    todos.splice(id, 1); //idを一つ消す？
+    //配列名.splice() …… 配列から要素を削除・追加して組み替える
     localStorage.setItem('todo', JSON.stringify(todos));
  
     show();
@@ -33,9 +35,9 @@ function remove() {
 function show() {
     var todos = get_todos();
  
-    var html = '<ul>';
-    for(var i=0; i<todos.length; i++) {
-        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">x</button></li>';
+    var html = '<ul>';　
+    for(var i=0; i<todos.length; i++) { //iがtodosの数より小さいときに実行、終わったたら１足す
+        html += '<li><input type="checkbox" class="check" value="1">' + todos[i] + '<button class="remove" id="' + i  + '">X</button></li>';
     };
     html += '</ul>';
  

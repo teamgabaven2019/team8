@@ -4,6 +4,11 @@
     padding: 0px;
 }
 
+body{
+    margin:0px;
+    padding: 0px;
+}
+
 header{/*position:fixed;*/
     padding: 20px;
     max-width: 100%;
@@ -21,8 +26,8 @@ h3{
     text-align: center;
     margin: 10px;}
 
-.todoinput{
-    width:200px;
+#task{
+    width:250px;
     font-size:24px;
     font-weight:bold;
     text-decoration:none;
@@ -34,8 +39,8 @@ h3{
     border-radius: 10px;
     margin:  0 auto;
 }
-.todoadd{
-    width:200px;
+#add{
+    width:150px;
     font-size:24px;
     font-weight:bold;
     text-decoration:none;
@@ -52,11 +57,17 @@ hr{
     margin: 25px;
 }
 
-.todolist{
+
+li{
+    padding: 5px;
+    border: rgb(124, 124, 124) 2px;
+}
+
+#todos{
     margin: 5px;
     text-align:center;
     font-size:24px;
-
+    
 }
 
 body{margin: 0px;}
