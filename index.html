@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="ja"> <!--←←オフラインでの利用に必要らしい-->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">　
   <!--　↑↑モバイル端末での利用を想定したとき必要らしい↑↑　-->
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon/style.css">
 </head>
-<header>
-  <p class="title">TODOリスト</p>
-</header>
-<body>
 
-  <h3>1日の目標を入力してください</h3>
-<input id="task"><button id="add">登録</button></div>
-<hr>
-<div id="todos">
+
+
+<body>
+  <header>
+        <p class="title">TODOリスト</p>
+  </header>
+
+  <div class="space">スペース確保？</div>
+
+  <main class="todo-list">
+  　<h3>1日の目標を入力してください</h3>
+　　<input id="task"><button id="add">登録</button></div>
+　　<hr>
+　　<div id="todos">
  
-<script src="js/todo.js"></script>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+　　<script src="js/todo.js"></script>
+　</main>
+
+ <div class="space">スペース確保？</div>
+<footer>
+  <ul id="menu">
+    <li class="menu_i"><a href="#home"><i class="icon-checkmark"></i><p class="icon-title">TODO</p></a></li>
+    <li class="menu_i"><a href="#news"><i class="icon-search2"></i><p class="icon-title">紹介</p></a></li>
+    <li class="menu_i"><a href="#contact"><i class="icon-trophy2"></i><p class="icon-title">記録</p></a></li>
+    <li class="menu_i"><a href="#about"><i class="icon-cog"></i><p class="icon-title">設定</p></a></li>
+  </ul>
+</footer>
+
+
 </body>
 </html>
 
