@@ -6,7 +6,7 @@ function get_todos() { //以前入れたリストの呼びだし？
     }
     return todos;　//返します
 }
- 
+
 function add() { //リストの追加
     var task = document.getElementById('task').value; //「task」にid taskないのvalue属性の値を取得
     //「getElementById」は、任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメソッド
@@ -37,7 +37,7 @@ function show() {
  
     var html = '<ul>';　
     for(var i=0; i<todos.length; i++) { //iがtodosの数より小さいときに実行、終わったたら１足す
-        html += '<li><input type="checkbox" class="check" value="1">' + todos[i] + '<button class="remove" id="' + i  + '">X</button></li>';
+        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">×</button></li>';
     };
     html += '</ul>';
  
@@ -49,5 +49,11 @@ function show() {
     };
 }
  
+var todos = get_todos();
+console.log(todos.length);
+console.log(todos);
+
 document.getElementById('add').addEventListener('click', add);
 show();
+
+
