@@ -7,6 +7,13 @@ function get_todos() { //以前入れたリストの呼びだし？
     return todos;　//返します
 }
 
+function get_finished(){
+    var finished 
+    var finished_str = localStorage.getItem('fini');
+    finished = JSON.parse(finished_str);
+    return finished;
+}
+
 function add() { //リストの追加
     var task = document.getElementById('task').value; //「task」にid taskないのvalue属性の値を取得
     //「getElementById」は、任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメソッド
@@ -26,6 +33,11 @@ function remove() { //消す
     todos.splice(id, 1); //idを一つ消す？
     //配列名.splice() …… 配列から要素を削除・追加して組み替える
     localStorage.setItem('todo', JSON.stringify(todos));
+
+    var finished = get_finished();
+    finished ++;
+    localStorage.setItem('fini', JSON.stringify(finished));
+    console.log(finished);
  
     show();
  
@@ -37,23 +49,40 @@ function show() {
  
     var html = '<ul>';　
     for(var i=0; i<todos.length; i++) { //iがtodosの数より小さいときに実行、終わったたら１足す
-        html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">×</button></li>';
+        //html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">×</button></li>';
+        html += '<li><button style="font-size:100%" class="remove" id="i">　</button>' + todos[i] + '</li>';
     };
     html += '</ul>';
- 
-    document.getElementById('todos').innerHTML = html;
+    document.getElementById('todos').innerHTML = html; //上の文をhtmlにぶち込みます
  
     var buttons = document.getElementsByClassName('remove');
-    for (var i=0; i < buttons.length; i++) {
+    for (var i=0; i < buttons.length; i++){
         buttons[i].addEventListener('click', remove);
     };
+    
 }
- 
+
+//リセットのやつ
+window.onload = function(){
+    document.getElementById("reset").addEventListener("click", function(){ //resetIDのあるところをクリックしたら起こります
+      finished = get_finished(); 
+      finished =0; //０代入してリセット
+      localStorage.setItem('fini', JSON.stringify(finished)); //リセットしたことをローカルストレージに教える
+      console.log(finished);
+      //カウントのためのコーど
+    })
+}
+
+var finished = get_finished();
+var count = document.getElementById("count_text");
+
 var todos = get_todos();
 console.log(todos.length);
 console.log(todos);
 
+
 document.getElementById('add').addEventListener('click', add);
 show();
+
 
 
