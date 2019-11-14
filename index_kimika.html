@@ -7,7 +7,17 @@
   <!--　↑↑モバイル端末での利用を想定したとき必要らしい↑↑　-->
   <link rel="stylesheet" type="text/css" href="css/kimika_style.css">
   <!-- Icomoon Icon Fonts(アイコンのイラストはここからお借りしています)-->
-	<link rel="stylesheet" href="css/icomoon/style.css">
+  <link rel="stylesheet" href="css/icomoon/style.css">
+  <script type="text/javascript" src="intense.min.js"></script>> <!--画像を拡大表示するためのjsファイルを読み込む-->
+  <style type="text/css"> /* 画像を表示するためのCSSソース
+    .fullscreen-image {
+       cursor: url("./plus_cursor.png"), pointer; /* マウスポインタを指定 */
+       display: inline-block;   /* 横方向に並べる指定 */
+       margin: 0px 5px 5px 0px; /* 周囲の余白量(右と下に5pxずつ) */
+    }
+    </style>
+    
+
 </head>
 
 <body>
@@ -31,6 +41,11 @@
         <li class="menu_i"><a href="index_setting.html"><i class="icon-cog"></i><p class="icon-title">設定</p></a></li>
       </ul>
      </footer>
-
+     
+     <!--画像拡大表示のためのjs-->
+     <script type="text/javascript">
+      var elements = document.querySelectorAll( '.fullscreen-image' );
+      Intense( elements );
+   </script> 　
 </body>
 </html>
