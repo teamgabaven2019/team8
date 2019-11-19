@@ -7,7 +7,7 @@ function get_todos() { //以前入れたリストの呼びだし？
     return todos;　//返します
 }
 
-function get_finished(){
+function get_finished(){ //終えた数の呼び出し
     var finished 
     var finished_str = localStorage.getItem('fini');
     finished = JSON.parse(finished_str);
@@ -15,7 +15,7 @@ function get_finished(){
 }
 
 function add() { //リストの追加
-    var task = document.getElementById('task').value; //「task」にid taskないのvalue属性の値を取得
+    var task = document.getElementById('task').value; //「task」にid task内のvalue属性の値を取得
     //「getElementById」は、任意のHTMLタグで指定したIDにマッチするドキュメント要素を取得するメソッド
  
     var todos = get_todos();
@@ -81,8 +81,8 @@ console.log(todos.length);
 console.log(todos);
 
 
-document.getElementById('add').addEventListener('click', add);
-show();
+//document.getElementById('add').addEventListener('click', add);
+//show();
 
 
 

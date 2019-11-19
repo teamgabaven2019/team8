@@ -23,7 +23,7 @@ header{
 
 .space{
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     width: 100%;
     max-height:auto;
     font-size: 20px;
@@ -38,7 +38,50 @@ header{
 h3{
     text-align: center;
     margin: 10px;}
+
+.balloon1 {
+    text-align: center;
+    font-size: 100%;
+	position: relative;
+	background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin: 20px 40px;
+    padding:10px;
     
+}
+.balloon1:after, .balloon1:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.balloon1:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.balloon1:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #000000;
+	border-width: 19px;
+	margin-left: -19px;
+}
+    
+.top_img{
+    text-align: center;
+}
+
+img{
+    max-width: 250px;
+    margin: 2%,10%,2%,10%;
+}
 li{
     padding: 5px;
     border: rgb(124, 124, 124) 2px;}
