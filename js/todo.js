@@ -81,8 +81,8 @@ console.log(todos.length);
 console.log(todos);
 
 
-//document.getElementById('add').addEventListener('click', add);
-//show();
+document.getElementById('add').addEventListener('click', add);
+show();
 
 
 
