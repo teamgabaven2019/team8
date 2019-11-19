@@ -39,8 +39,20 @@ h3{
     text-align: center;
     margin: 10px;}
 
+main{
+    margin: 5%;
+}
+
+.clear_img{
+    display:inline-block;
+    width:100px;
+    height:100px;
+}
+
 img{
-    width: 50%;
+    
+    width: 100px;
+    margin: 1%;
 }    
     
 li{
