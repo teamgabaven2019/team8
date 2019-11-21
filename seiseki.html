@@ -7,46 +7,96 @@
   <!--　↑↑モバイル端末での利用を想定したとき必要らしい↑↑　-->
   <link rel="stylesheet" type="text/css" href="css/seiseki_style.css">
   <!-- Icomoon Icon Fonts(アイコンのイラストはここからお借りしています)-->
-  <link rel="stylesheet" href="css/icomoon/style.css">
-<!--画像を拡大表示するためのjsファイルを読み込む↓-->
-  <script type="text/javascript" src="intense.min.js"></script>> 
-  <style type="text/css"> /* 画像を表示するためのCSSソース
-    .fullscreen-image {
-       cursor: url("./plus_cursor.png"), pointer; /* マウスポインタを指定 */
-       display: inline-block;   /* 横方向に並べる指定 */
-       margin: 0px 5px 5px 0px; /* 周囲の余白量(右と下に5pxずつ) */
-    }
-    </style>
-    
-
+	<link rel="stylesheet" href="css/icomoon/style.css">
 </head>
 
 <body>
   <header>
-   <p class="title">達成リスト</p> <!--一番上に表示されるテキスト-->
+   <p class="title">設定</p> <!--一番上に表示されるテキスト-->
   </header>
 
   <div class="space">スペース確保</div> <!--上下のメニューバーと本文が被らないようにするためのボックスです。そのままにしてください-->
 
- 　<!--この中に色々作ってください-->
+ 　<main>
+    <div id="todos">
+      <script src="js/todo.js"></script>
+    </div>
+  
+    <div class="clear_img">
+      <script >
+        var finished = get_finished();
+        if(finished>=1){
+          document.write("<img src='images/clear1.jpg'>");
+        }else{
+          document.write("<img src='images/clear0.jpg'>");
+        }
+    　</script>
+    </div>
+    <div class="clear_img">
+        <script >
+          var finished = get_finished();
+          if(finished>=3){
+            document.write("<img src='images/clear3.jpg'>");
+          }else{
+            document.write("<img src='images/clear0.jpg'>");
+          }
+      　</script>
+      </div>
+      <div class="clear_img">
+          <script >
+            var finished = get_finished();
+            if(finished>=5){
+              document.write("<img src='images/clear5.jpg'>");
+            }else{
+              document.write("<img src='images/clear0.jpg'>");
+            }
+        　</script>
+        </div>
+        <div class="clear_img">
+          <script >
+            var finished = get_finished();
+            if(finished>=7){
+              document.write("<img src='images/clear7.jpg'>");
+            }else{
+              document.write("<img src='images/clear0.jpg'>");
+            }
+          </script>
+        </div>
+        <div class="clear_img">
+          <script >
+            var finished = get_finished();
+            if(finished>=7){
+              document.write("<img src='images/clear7.jpg'>");
+            }else{
+              document.write("<img src='images/clear0.jpg'>");
+            }
+          </script>
+        </div>
+        <div class="clear_img">
+          <script >
+            var finished = get_finished();
+            if(finished>=7){
+              document.write("<img src='images/clear7.jpg'>");
+            }else{
+              document.write("<img src='images/clear0.jpg'>");
+            }
+          </script>
+        </div>
+
+  </main>
 
   <div class="space">スペース確保</div> <!--上に同じく-->
 
   <!--下部メニュー-->
   　<footer>
       <ul id="menu">
-        <li class="menu_i"><a href="index_top.html"><i class="icon-site-icon"></i><p class="icon-title">TOP</p></a></li>
-        <li class="menu_i"><a href="index_todos.html"><i class="icon-checkmark"></i><p class="icon-title">TODO</p></a></li>
+        <li class="menu_i"><a href="index.html"><i class="icon-site-icon"></i><p class="icon-title">TOP</p></a></li>
+        <li class="menu_i"><a href="todos.html"><i class="icon-checkmark"></i><p class="icon-title">TODO</p></a></li>
         <li class="menu_i"><a href="index_nakae.html"><i class="icon-search"></i><p class="icon-title">紹介</p></a></li>
         <li class="menu_i"><a href="seiseki.html"><i class="icon-trophy"></i><p class="icon-title">記録</p></a></li>
-        <li class="menu_i"><a href="index_setting.html"><i class="icon-cog"></i><p class="icon-title">設定</p></a></li>
+        <li class="menu_i"><a href="setting.html"><i class="icon-cog"></i><p class="icon-title">設定</p></a></li>
       </ul>
-     </footer>
-     
-     <!--画像拡大表示のためのjs-->
-     <script type="text/javascript">
-      var elements = document.querySelectorAll( '.fullscreen-image' );
-      Intense( elements );
-   </script> 　
+    </footer>
+
 </body>
 </html>
