@@ -7,8 +7,13 @@
   <!--　↑↑モバイル端末での利用を想定したとき必要らしい↑↑　-->
   <link rel="stylesheet" type="text/css" href="css/todo_style.css">
   <!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon/style.css">
+  <link rel="stylesheet" href="css/icomoon/style.css">
+  <!-- lightbox -->
+  <link rel="stylesheet" href="css/lightbox.min.css">
 </head>
+
+<!-- lightbox -->
+<script src="js/lightbox.min.js"></script>
 
 <body>
   <header>
@@ -26,6 +31,17 @@
     <div id="todos">
      <script src="js/todo.js"></script>
     </div>
+
+    <img id="image_place"src="image1.jpg"/>
+
+    <script type="text/javascript">
+        var finished = get_finished();
+        if(finished==1){
+          var img = document.getElementById("image_place");
+          img.src = "images/clear_0.png";
+        }
+
+    </script>
     
   </main>
 
