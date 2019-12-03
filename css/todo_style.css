@@ -90,7 +90,7 @@ img{
 	width:100%;
 }
 
-#modal-content {
+#modal-content-00,#modal-content-02,#modal-content-04 {
 	width: 80% ;
 	margin: 0 ;
 	padding: 10px 20px ;
@@ -123,9 +123,10 @@ img{
 }
 
 .sprite01 {
+    margin:0 auto;
 	background: url(../images/sprite001.png) no-repeat;
 	width: 401px;
-	height: 401px;
+    height: 401px;
 	animation: smile 0.5s steps(4) infinite;
   }
    
@@ -136,6 +137,7 @@ img{
   }
 
   .sprite03 {
+    margin:0 auto;
 	background: url(../images/sprite003.png) no-repeat;
 	width: 401px;
 	height: 401px;
@@ -149,9 +151,10 @@ img{
   }
 
   .sprite05 {
+    margin:0 auto;
 	background: url(../images/sprite005.png) no-repeat;
 	width: 401px;
-	height: 401px;
+    height: 401px;
 	animation: smile 0.5s steps(4) infinite;
   }
    
