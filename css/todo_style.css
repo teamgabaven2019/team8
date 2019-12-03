@@ -163,6 +163,10 @@ img{
 
 モーダル仮〆
 
+li{
+    padding: 5px;
+    border: rgb(124, 124, 124) 2px;}
+
 footer{
     position: fixed;
     bottom: 0px;                /* 位置(下0px) */
