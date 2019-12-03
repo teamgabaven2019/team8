@@ -80,9 +80,8 @@ var todos = get_todos();
 console.log(todos.length);
 console.log(todos);
 
-
 document.getElementById('add').addEventListener('click', add);
 show();
-
+  
 
 
