@@ -125,42 +125,42 @@ img{
 .sprite01 {
     margin:0 auto;
 	background: url(../images/sprite001.png) no-repeat;
-	width: 401px;
-    height: 401px;
+	width: 201px;
+    height: 201px;
 	animation: smile 0.5s steps(4) infinite;
   }
    
   @keyframes smile {
 	to {
-	  background-position: -1600px 0;
+	  background-position: -800px 0;
 	}
   }
 
   .sprite03 {
     margin:0 auto;
 	background: url(../images/sprite003.png) no-repeat;
-	width: 401px;
-	height: 401px;
+	width: 201px;
+	height: 201px;
 	animation: smile 0.5s steps(4) infinite;
   }
    
   @keyframes smile {
 	to {
-	  background-position: -1600px 0;
+	  background-position: -800px 0;
 	}
   }
 
   .sprite05 {
     margin:0 auto;
 	background: url(../images/sprite005.png) no-repeat;
-	width: 401px;
-    height: 401px;
+	width: 201px;
+    height: 201px;
 	animation: smile 0.5s steps(4) infinite;
   }
    
   @keyframes smile {
 	to {
-	  background-position: -1600px 0;
+	  background-position: -800px 0;
 	}
   }
 
