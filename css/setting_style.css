@@ -5,15 +5,21 @@
     padding: 0px;
 }
 
+html{
+    margin: auto;
+    padding: 0%;
+}
+
 body{
     margin:0px;
     padding: 0px;
+    
 }
 
 header{
     text-align: center;
     position:fixed;
-    padding: 20px;
+    padding: 20px 0px;
     width: 100%;
     max-height:auto;
     font-size: 20px;
@@ -23,7 +29,7 @@ header{
 
 .space{
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px;
     width: 100%;
     max-height:auto;
     font-size: 20px;
