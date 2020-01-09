@@ -2,6 +2,7 @@
 <html lang="ja"> <!--←←オフラインでの利用に必要らしい-->
 
 <head>
+    <link rel="stylesheet" href="css/lightbox.min.css"> <!--(Lightbox)画像拡大のためのCSSへのリンク-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">　
   <!--　↑↑モバイル端末での利用を想定したとき必要らしい↑↑　-->
@@ -11,6 +12,7 @@
 </head>
 
 <body>
+   
   <header>
    <p class="title">設定</p> <!--一番上に表示されるテキスト-->
   </header>
@@ -21,12 +23,12 @@
     <div id="todos">
       <script src="js/todo.js"></script>
     </div>
-  
+  <a href="images/clear1.jpg" data-lightbox="clear"><img src="images/clear1.jpg" alt=""></a> <!--拡大する画像のリンク-->
     <div class="clear_img">
       <script >
         var finished = get_finished();
         if(finished>=1){
-          document.write("<img src='images/clear1.jpg'>");
+          document.write('<a href="images/clear1.jpg" data-lightbox="clear"><img src="images/clear1.jpg" alt=""></a> <!--拡大する画像のリンク-->');
         }else{
           document.write("<img src='images/clear0.jpg'>");
         }
@@ -98,5 +100,6 @@
       </ul>
     </footer>
 
+    <script src="js/lightbox.min.js"></script> <!--(Lightbox)画像拡大のためのjsへのリンク-->
 </body>
 </html>
