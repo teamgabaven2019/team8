@@ -72,15 +72,15 @@ footer{
   }
     a {
     text-decoration: none;
-  }
+  }a {
+    color:#000077;
+    }
+
 
   .icon-user{
     text-align: center;
     font-size: 200%;
     font-weight: bold;
-  }
-   a {
-    text-decoration: none;
   }
 
   .icon-info{
@@ -88,17 +88,11 @@ footer{
     font-size: 200%;
     font-weight: bold;
   }
-  a {
-    text-decoration: none;
-  }
 
   .icon-profile{
     text-align: center;
     font-size: 200%;
     font-weight: bold;
-  }
-  a {
-    text-decoration: none;
   }
   
  /*各項目のボタン　ここまで試し -->*/
