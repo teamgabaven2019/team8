@@ -43,11 +43,8 @@ function remove() { //消す
  
     return false;
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> master
  
 function show() {
     var todos = get_todos();
@@ -55,12 +52,8 @@ function show() {
     var html = '<ul>';　
     for(var i=0; i<todos.length; i++) { //iがtodosの数より小さいときに実行、終わったたら１足す
         //html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">×</button></li>';
-<<<<<<< HEAD
-        html += '<li><button style="font-size:100%" class="remove" id="i">　</button>' + todos[i] + '</li>';
-=======
 		html += '<li><button style="font-size:100%" class="remove" id="i">　</button>' + todos[i] + '</li>';
 		//html += '<input type="checkbox" name="check" value="apple">'+ todos[i];
->>>>>>> master
     };
     html += '</ul>';
     document.getElementById('todos').innerHTML = html; //上の文をhtmlにぶち込みます
@@ -90,13 +83,6 @@ var todos = get_todos();
 console.log(todos.length);
 console.log(todos);
 
-<<<<<<< HEAD
-
-document.getElementById('add').addEventListener('click', add);
-show();
-
-
-=======
 document.getElementById('add').addEventListener('click', add);
 show();
   
@@ -187,5 +173,4 @@ $(function(){
 		}
 	
     } ) ;
->>>>>>> master
 
