@@ -52,7 +52,7 @@ function show() {
     var html = '<ul>';　
     for(var i=0; i<todos.length; i++) { //iがtodosの数より小さいときに実行、終わったたら１足す
         //html += '<li>' + todos[i] + '<button class="remove" id="' + i  + '">×</button></li>';
-		html += '<li><button style="font-size:100%" class="remove" id="i">　</button>' + todos[i] + '</li>';
+		html += '<li><button style="font-size:100%" class="remove" id="i">◻︎</button>' + todos[i] + '</li>';
 		//html += '<input type="checkbox" name="check" value="apple">'+ todos[i];
     };
     html += '</ul>';
